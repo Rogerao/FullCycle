@@ -1,4 +1,4 @@
 # FullCycle
 Repo de armazenamento dos desafios do curso FullCycle
 
-Para executar a imagem, baixe rogerao/desafio-docker-go:latest
+Para executar a imagem, execute docker run rogerao/fullcycle:latest
