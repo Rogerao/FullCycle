@@ -1,0 +1,15 @@
+FROM golang:1.22.2-alpine3.19 as Builder
+
+WORKDIR /app
+
+COPY . .
+
+ENV CGO_ENABLED=0
+
+RUN go build -ldflags='-w -s' -o app
+
+FROM scratch
+
+COPY --from=builder /app/app /app
+
+CMD ["/app"]
