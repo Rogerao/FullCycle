@@ -1,4 +1,6 @@
 # FullCycle
 Repo de armazenamento dos desafios do curso FullCycle
 
-Para executar a imagem, execute docker run rogerao/fullcycle:latest
+Para a pasta DesafioGo, execute o comando 'docker run rogerao/fullcycle:latest'
+
+Para a pasta DesafioNodeNginx, execute o comando docker-compose up --build -d
