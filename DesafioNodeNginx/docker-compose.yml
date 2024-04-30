@@ -32,19 +32,18 @@ services:
     command: node index.js
 
   db:
-    build: 
-      context: mysql
+    image: mysql:5.7.16
     command: --innodb-use-native-aio=0
     container_name: db
     restart: always
     tty: true
-    networks:
-      - node-network
     volumes:
-      - /mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=nodedb
       - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - node-network
 
 networks:
   node-network:
